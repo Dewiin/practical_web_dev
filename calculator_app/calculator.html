@@ -126,7 +126,10 @@
         updateDisplay: () => {
           const display = document.getElementById("display");
           display.innerText = data.displayString;
-        },
+        }, 
+        calculateDisplay: () => {
+          // implement expression tree here
+        }
       };
 
       const display = document.getElementById("display");
@@ -149,6 +152,14 @@
           data.appendStringParenthesis(elem.innerText);
         });
       });
+
+      const equalsOperator = document.getElementsByClassName("equals");
+
+      equalsOperator.addEventListener("click", () => {
+        data.calculateDisplay(data.displayString);
+      })
+
+
     </script>
   </body>
 </html>
