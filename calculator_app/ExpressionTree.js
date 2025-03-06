@@ -37,17 +37,17 @@ export class ExpressionTree {
 
     evaluateTree(node = this.root) {
         if (!node.left && !node.right) {
-            return parseFloat(node.value);
+            return parseInt(node.value);
         }
     
         const leftValue = this.evaluateTree(node.left);
         const rightValue = this.evaluateTree(node.right);
     
         switch (node.value) {
-            case '+': return leftValue + rightValue;
-            case '-': return leftValue - rightValue;
-            case '*': return leftValue * rightValue;
-            case '/': return leftValue / rightValue;
+            case '+': return parseInt(leftValue + rightValue);
+            case '-': return parseInt(leftValue - rightValue);
+            case '*': return parseInt(leftValue * rightValue);
+            case '/': return parseInt(leftValue / rightValue);
         }
     }
 }

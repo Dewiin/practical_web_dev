@@ -71,7 +71,7 @@ button:active {
 
 .displayContainer {
     display: flex;
-    margin: 1rem auto;
+    margin: 0 auto 1rem;
     padding: 1rem;
     justify-content: flex-end;
     width: 350px;
@@ -80,5 +80,7 @@ button:active {
 }
 
 #display {
-    color: var(--calculator-font-color)
+    color: var(--calculator-font-color);
+    font-size: 32px;
+    overflow: scroll;
 }
